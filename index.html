@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVARA | Instituto de Desarrollo Humano y Transformación Social</title>
+    <meta name="description"
+        content="Red interdisciplinaria de formadores especializados en desarrollo humano y transformación social.">
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Iconos Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="landing.css">
+    <style>
+        /* Overlay de transición de página */
+        .page-transition-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #1B2A4A;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .page-transition-overlay.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .page-transition-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .transition-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            color: #fff;
+            font-family: 'Outfit', sans-serif;
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: 3px;
+        }
+
+        .transition-spinner {
+            width: 48px;
+            height: 48px;
+            border: 4px solid rgba(255, 255, 255, 0.15);
+            border-top-color: #E8841A;
+            border-radius: 50%;
+            animation: tspin 0.8s linear infinite;
+        }
+
+        @keyframes tspin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Submenú de contacto - asegurar que se abre hacia abajo */
+        .contact-submenu {
+            top: calc(100% + 16px) !important;
+            bottom: auto !important;
+            transform: translateX(-50%) translateY(-10px) !important;
+        }
+
+        .contact-submenu.open {
+            transform: translateX(-50%) translateY(0) !important;
+        }
+
+        .contact-submenu-arrow {
+            top: -8px !important;
+            bottom: auto !important;
+            box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.05) !important;
+        }
+
+        .cta-section {
+            overflow: visible !important;
+            padding-bottom: 160px !important;
+        }
+
+        .cta-section::before {
+            pointer-events: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Overlay de transición de página -->
+    <div class="page-transition-overlay" id="page-transition-overlay">
+        <div class="transition-logo">
+            <div class="transition-spinner"></div>
+            <span>NOVARA</span>
+        </div>
+    </div>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+
+                <img src="img/novara.jpg" alt="Logo NOVARA">
+
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="#" class="active">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#metodo">Método</a>
+                <a href="#programas">Programas</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+                <i class='bx bx-menu'></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Sección Hero (Principal) -->
+    <header class="hero" id="inicio">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class='bx bx-star'></i>
+                    <span>Community Stars</span>
+                </div>
+                <h1 class="hero-title">Transformación<br>real y liderazgo<br>en tiempos de crisis</h1>
+                <p class="hero-description">
+                    Somos NOVARA, una red interdisciplinaria de formadores
+                    especializados en desarrollo humano y transformación social.
+                </p>
+                <div class="hero-actions">
+                    <a href="#programas" class="btn-primary">Conoce Nuestros Programas</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-wrapper">
+                    <img src="img/hero-group.png" alt="Equipo NOVARA - Grupo de formadores y estudiantes">
+                    <div class="hero-arrow">
+                        <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 90 C30 60, 50 30, 90 20" stroke="#E8841A" stroke-width="6" fill="none"
+                                stroke-linecap="round" />
+                            <polygon points="85,10 100,18 88,28" fill="#E8841A" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección ¿Quiénes Somos? -->
+    <section id="nosotros" class="section about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="img/about-meeting.png" alt="Reunión del equipo NOVARA">
+                </div>
+                <div class="about-content">
+                    <h2 class="section-title">¿Quiénes Somos?</h2>
+                    <p class="about-lead">Impulsando el cambio desde la acción.</p>
+                    <p class="about-text">
+                        En NOVARA no nos limitamos a la teoría, somos un espacio interdisciplinario de formación en el
+                        desarrollo humano y la transformación social, con el propósito de acompañar a personas, equipos
+                        y
+                        comunidades que atraviesan contextos de crisis,
+                        cambio y reconstrucción.</p>
+
+                    <p class="about-text">Trabajamos integrando herramientas del desarrollo personal, la salud mental,
+                        el
+                        liderazgo y el
+                        trabajo territorial con un objetivo claro: generar procesos reales de crecimiento, autonomía y
+                        fortalecimiento
+                        humano, bajo la profunda convicción de que detrás de cada crisis existe una oportunidad para
+                        reconstruirse.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Nuestro Enfoque (El Método NOVARA) -->
+    <section id="metodo" class="section method-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Nuestro Enfoque (El Método NOVARA)</h2>
+            </div>
+            <div class="method-grid">
+                <!-- Pilar 1 - Estabilización Personal -->
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class='bx bx-shield-quarter'></i>
+                    </div>
+                    <div class="method-number">1</div>
+                    <h3>Estabilización Personal</h3>
+                    <p>Enfoque centrado en el orden interno y gestión del estrés.</p>
+                    <a href="#programas" class="method-link">Saber Más <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+                <!-- Pilar 2 - Liderazgo Consciente -->
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class='bx bx-group'></i>
+                    </div>
+                    <div class="method-number">2</div>
+                    <h3>Liderazgo Consciente</h3>
+                    <p>Desarrollo de habilidades motrices, coordinación de equipos y liderazgo en situaciones de crisis.
+                    </p>
+                    <a href="#programas" class="method-link">Saber Más <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+                <!-- Pilar 3 - Intervención Social -->
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class='bx bx-world'></i>
+                    </div>
+                    <div class="method-number">3</div>
+                    <h3>Intervención Social</h3>
+                    <p>Atención humana y gestión en intervenciones territoriales, atendiendo lo humano en situaciones de
+                        crisis.
+                    </p>
+                    <a href="#programas" class="method-link">Saber Más <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+                <!-- Pilar 4 - Reconversión Productiva -->
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class='bx bx-trending-up'></i>
+                    </div>
+                    <div class="method-number">4</div>
+                    <h3>Reconversión Productiva</h3>
+                    <p>Reconversión de los cambios hacia actividades productivas.</p>
+                    <a href="#programas" class="method-link">Saber Más <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Programas de Formación Inicial -->
+    <section id="programas" class="section programs-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Programas de Formación Inicial</h2>
+            </div>
+            <div class="programs-grid">
+                <!-- Programa 1 - Talleres -->
+                <div class="program-card">
+                    <div class="program-icon icon-orange">
+                        <i class='bx bx-user-check'></i>
+                    </div>
+                    <h3>Talleres</h3>
+                    <a href="talleres.html" class="program-link" data-nav-link>Saber Más</a>
+                </div>
+                <!-- Programa 2 - Cursos -->
+                <div class="program-card">
+                    <div class="program-icon icon-blue">
+                        <i class='bx bx-group'></i>
+                    </div>
+                    <h3>Cursos</h3>
+                    <a href="cursos.html" class="program-link" data-nav-link>Saber Más</a>
+                </div>
+                <!-- Programa 3 - Programas -->
+                <div class="program-card">
+                    <div class="program-icon icon-green">
+                        <i class='bx bx-globe'></i>
+                    </div>
+                    <h3>Programas</h3>
+                    <a href="programas.html" class="program-link" data-nav-link>Saber Más</a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sección CTA / Contacto -->
+    <section id="contacto" class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>El momento de actuar es hoy.</h2>
+                <div class="cta-actions">
+                    <div class="contact-menu-wrapper" id="contact-menu-wrapper">
+                        <button class="btn-primary contact-toggle" id="contact-toggle">
+                            <i class='bx bx-envelope'></i> Contáctanos <i
+                                class='bx bx-chevron-down contact-chevron'></i>
+                        </button>
+                        <div class="contact-submenu" id="contact-submenu">
+                            <div class="contact-submenu-arrow"></div>
+                            <h4 class="contact-submenu-title">Nuestros canales de contacto</h4>
+
+                            <div class="contact-group">
+                                <div class="contact-group-label"><i class='bx bx-envelope'></i> Email</div>
+                                <a href="mailto:info@novarainstituto.com" class="contact-item" id="contact-email">
+                                    <span>novara.oficial1989@gmail.com</span>
+                                    <i class='bx bx-right-arrow-alt'></i>
+                                </a>
+                            </div>
+
+                            <div class="contact-group">
+                                <div class="contact-group-label"><i class='bx bxl-whatsapp'></i> WhatsApp</div>
+                                <a href="https://wa.me/5491155551234" target="_blank" rel="noopener"
+                                    class="contact-item" id="contact-whatsapp-link">
+                                    <span>+54 9 11 5555-1234</span>
+                                    <i class='bx bx-right-arrow-alt'></i>
+                                </a>
+                            </div>
+
+                            <div class="contact-group">
+                                <div class="contact-group-label"><i class='bx bx-share-alt'></i> Redes Sociales</div>
+                                <div class="contact-socials">
+                                    <a href="https://instagram.com/novara.instituto" target="_blank" rel="noopener"
+                                        class="contact-social-btn" id="contact-instagram" title="Instagram">
+                                        <i class='bx bxl-instagram'></i>
+                                    </a>
+                                    <a href="https://facebook.com/novarainstituto" target="_blank" rel="noopener"
+                                        class="contact-social-btn" id="contact-facebook" title="Facebook">
+                                        <i class='bx bxl-facebook'></i>
+                                    </a>
+                                    <a href="https://tiktok.com/@novara.instituto" target="_blank" rel="noopener"
+                                        class="contact-social-btn" id="contact-tiktok" title="TikTok">
+                                        <i class='bx bxl-tiktok'></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#programas" class="btn-outline">Súmate a la Red NOVARA</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-logo">
+                <div class="logo">
+                    <div class="logo-icon">N</div>
+                    <span>NOVARA</span>
+                </div>
+                <p>Instituto de Desarrollo Humano<br>y Transformación Social</p>
+            </div>
+            <div class="footer-nav">
+                <a href="#">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#metodo">Método</a>
+                <a href="#programas">Programas</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Instituto NOVARA. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script principal -->
+    <script src="main.js"></script>
+</body>
+
+</html>
