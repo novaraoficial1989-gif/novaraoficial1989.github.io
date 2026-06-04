@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programas | NOVARA</title>
+    <meta name="description"
+        content="Programas integrales de formación de NOVARA en desarrollo humano y transformación social.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="cursos.css">
+</head>
+
+<body>
+    <div class="page-transition-overlay" id="page-transition-overlay">
+        <div class="transition-logo">
+            <div class="transition-spinner"></div><span>NOVARA</span>
+        </div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo" data-nav-link><img src="img/novara.jpg" alt="Logo NOVARA"></a>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html" data-nav-link>Inicio</a>
+                <a href="index.html#nosotros" data-nav-link>Nosotros</a>
+                <a href="index.html#metodo" data-nav-link>Método</a>
+                <a href="#" class="active">Programas</a>
+                <a href="index.html#contacto" data-nav-link>Contacto</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú"><i class='bx bx-menu'></i></button>
+        </div>
+    </nav>
+
+    <header class="cursos-hero">
+        <div class="cursos-hero-bg cursos-hero-bg--green"></div>
+        <div class="container cursos-hero-content">
+            <div class="cursos-hero-badge cursos-hero-badge--green"><i class='bx bx-globe'></i><span>Formación
+                    Integral</span></div>
+            <h1 class="cursos-hero-title">Programas</h1>
+            <p class="cursos-hero-description">Itinerarios formativos completos y de larga duración para una
+                transformación integral y profesional.</p>
+            <div class="cursos-hero-tabs">
+                <a href="talleres.html" class="tab-btn" data-nav-link><i class='bx bx-user-check'></i> Talleres</a>
+                <a href="cursos.html" class="tab-btn" data-nav-link><i class='bx bx-group'></i> Cursos</a>
+                <a href="programas.html" class="tab-btn active"><i class='bx bx-globe'></i> Programas</a>
+            </div>
+        </div>
+        <div class="cursos-hero-wave"><svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,80 1440,70 L1440,120 L0,120 Z" fill="#ffffff" />
+            </svg></div>
+    </header>
+
+    <section class="cursos-section">
+        <div class="container">
+            <div class="section-intro">
+                <div class="section-icon icon-green"><i class='bx bx-globe'></i></div>
+                <h2 class="section-title">Nuestros Programas</h2>
+                <p class="section-subtitle">Recorridos formativos extensos que combinan teoría, práctica y
+                    acompañamiento para una transformación profunda.</p>
+            </div>
+            <div class="cursos-grid">
+                <!-- Programa 1 - Destacado 
+                <div class="curso-card curso-card-featured" id="programa-1">
+                    <div class="curso-card-header programa-gradient">
+                        <div class="curso-card-badge">⭐ Destacado</div> 
+                        <div class="curso-card-category">Programa Integral</div>
+                        <div class="curso-card-icon"><i class='bx bx-world'></i></div>
+                    </div>
+                    <div class="curso-card-body">
+                        <h3>Formación en Desarrollo Humano y Transformación Social</h3>
+                        <p class="curso-card-desc">Programa completo que integra coaching ontológico, psicología
+                            aplicada y trabajo social para formar agentes de cambio.</p>
+                        <div class="curso-card-meta"><span><i class='bx bx-time-five'></i> 200 horas</span><span><i
+                                    class='bx bx-calendar'></i> 12 meses</span></div>
+                        <div class="curso-card-modules">
+                            <h4>Módulos incluidos:</h4>
+                            <ul>
+                                <li><i class='bx bx-check-circle'></i> Estabilización Personal</li>
+                                <li><i class='bx bx-check-circle'></i> Liderazgo Consciente</li>
+                                <li><i class='bx bx-check-circle'></i> Intervención Social</li>
+                                <li><i class='bx bx-check-circle'></i> Reconversión Productiva</li>
+                            </ul>
+                        </div>
+                        <div class="curso-card-tags"><span class="tag tag-orange">Presencial</span><span
+                                class="tag tag-blue">Virtual</span><span class="tag tag-navy">Certificado</span></div>
+                        <a href="index.html#contacto" class="curso-card-btn btn-green" data-nav-link>Quiero Información
+                            <i class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+                </div>
+                Programa 2
+                <div class="curso-card" id="programa-2">
+                    <div class="curso-card-header programa-gradient">
+                        <div class="curso-card-category">Programa Especializado</div>
+                        <div class="curso-card-icon"><i class='bx bx-network-chart'></i></div>
+                    </div>
+                    <div class="curso-card-body">
+                        <h3>Intervención Territorial y Comunitaria</h3>
+                        <p class="curso-card-desc">Formación especializada en diagnóstico, planificación e intervención
+                            en comunidades y territorios vulnerables.</p>
+                        <div class="curso-card-meta"><span><i class='bx bx-time-five'></i> 120 horas</span><span><i
+                                    class='bx bx-calendar'></i> 8 meses</span></div>
+                        <div class="curso-card-tags"><span class="tag tag-orange">Presencial</span><span
+                                class="tag tag-navy">Certificado</span></div>
+                        <a href="index.html#contacto" class="curso-card-btn btn-green" data-nav-link>Quiero Información
+                            <i class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+                </div>
+                 Programa 3 
+                <div class="curso-card" id="programa-3">
+                    <div class="curso-card-header programa-gradient">
+                        <div class="curso-card-category">Programa Ejecutivo</div>
+                        <div class="curso-card-icon"><i class='bx bx-line-chart'></i></div>
+                    </div>
+                    <div class="curso-card-body">
+                        <h3>Reconversión Productiva y Sostenibilidad</h3>
+                        <p class="curso-card-desc">Estrategias y modelos de negocio sustentables para la transformación
+                            económica y productiva de comunidades.</p>
+                        <div class="curso-card-meta"><span><i class='bx bx-time-five'></i> 90 horas</span><span><i
+                                    class='bx bx-calendar'></i> 6 meses</span></div>
+                        <div class="curso-card-tags"><span class="tag tag-blue">Virtual</span><span
+                                class="tag tag-navy">Certificado</span></div>
+                        <a href="index.html#contacto" class="curso-card-btn btn-green" data-nav-link>Quiero Información
+                            <i class='bx bx-right-arrow-alt'></i></a>
+                    </div> 
+                </div>-->
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Listo para transformar tu futuro?</h2>
+                <p class="cta-sub">Contactanos y te asesoramos sobre el programa ideal para vos.</p>
+                <div class="cta-actions">
+                    <div class="contact-menu-wrapper" id="contact-menu-wrapper">
+                        <button class="btn-primary contact-toggle" id="contact-toggle">
+                            <i class='bx bx-envelope'></i> Contáctanos <i
+                                class='bx bx-chevron-down contact-chevron'></i>
+                        </button>
+                        <div class="contact-submenu" id="contact-submenu">
+                            <div class="contact-submenu-arrow"></div>
+                            <h4 class="contact-submenu-title">Nuestros canales de contacto</h4>
+
+                            <div class="contact-group">
+                                <div class="contact-group-label"><i class='bx bx-envelope'></i> Email</div>
+                                <a href="mailto:info@novarainstituto.com" class="contact-item" id="contact-email">
+                                    <span>novara.oficial1989@gmail.com</span>
+                                    <i class='bx bx-right-arrow-alt'></i>
+                                </a>
+                            </div>
+
+                            <div class="contact-group">
+                                <div class="contact-group-label"><i class='bx bxl-whatsapp'></i> WhatsApp</div>
+                                <a href="https://wa.me/5491155551234" target="_blank" rel="noopener"
+                                    class="contact-item" id="contact-whatsapp-link">
+                                    <span>+54 9 11 5555-1234</span>
+                                    <i class='bx bx-right-arrow-alt'></i>
+                                </a>
+                            </div>
+
+                            <div class="contact-group">
+                                <div class="contact-group-label"><i class='bx bx-share-alt'></i> Redes Sociales</div>
+                                <div class="contact-socials">
+                                    <a href="https://instagram.com/novara.instituto" target="_blank" rel="noopener"
+                                        class="contact-social-btn" id="contact-instagram" title="Instagram">
+                                        <i class='bx bxl-instagram'></i>
+                                    </a>
+                                    <a href="https://facebook.com/novarainstituto" target="_blank" rel="noopener"
+                                        class="contact-social-btn" id="contact-facebook" title="Facebook">
+                                        <i class='bx bxl-facebook'></i>
+                                    </a>
+                                    <a href="https://tiktok.com/@novara.instituto" target="_blank" rel="noopener"
+                                        class="contact-social-btn" id="contact-tiktok" title="TikTok">
+                                        <i class='bx bxl-tiktok'></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="index.html" class="btn-outline" data-nav-link>Volver al Inicio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-logo">
+                <div class="logo">
+                    <div class="logo-icon">N</div><span>NOVARA</span>
+                </div>
+                <p>Instituto de Desarrollo Humano<br>y Transformación Social</p>
+            </div>
+            <div class="footer-nav">
+                <a href="index.html" data-nav-link>Inicio</a>
+                <a href="talleres.html" data-nav-link>Talleres</a>
+                <a href="cursos.html" data-nav-link>Cursos</a>
+                <a href="programas.html">Programas</a>
+                <a href="index.html#contacto" data-nav-link>Contacto</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Instituto NOVARA. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const overlay = document.getElementById('page-transition-overlay');
+        window.addEventListener('load', () => { setTimeout(() => { overlay.classList.add('hidden'); }, 100); });
+        // Fix para navegación atrás en móviles (bfcache)
+        window.addEventListener('pageshow', (event) => {
+            if (event.persisted) { overlay.classList.remove('active'); overlay.classList.add('hidden'); }
+        });
+        document.querySelectorAll('a[data-nav-link]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                if (href && href !== '#' && !href.startsWith('#')) {
+                    e.preventDefault(); overlay.classList.remove('hidden'); overlay.classList.add('active');
+                    setTimeout(() => { window.location.href = href; }, 500);
+                }
+            });
+        });
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 50); });
+        const navToggle = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+        navToggle.addEventListener('click', () => { navLinks.classList.toggle('open'); const icon = navToggle.querySelector('i'); icon.classList.toggle('bx-menu'); icon.classList.toggle('bx-x'); });
+        navLinks.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { navLinks.classList.remove('open'); const icon = navToggle.querySelector('i'); icon.classList.add('bx-menu'); icon.classList.remove('bx-x'); }); });
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('revealed'); }); }, { threshold: 0.1 });
+        document.querySelectorAll('.curso-card, .section-intro').forEach(el => { el.classList.add('reveal'); observer.observe(el); });
+
+        // ==================== TOGGLE DEL SUBMENÚ DE CONTACTO ====================
+        const contactToggle = document.getElementById('contact-toggle');
+        const contactSubmenu = document.getElementById('contact-submenu');
+
+        if (contactToggle && contactSubmenu) {
+            contactToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                contactToggle.classList.toggle('open');
+                contactSubmenu.classList.toggle('open');
+            });
+
+            // Cerrar submenú al hacer clic fuera de él
+            document.addEventListener('click', (e) => {
+                if (!contactToggle.contains(e.target) && !contactSubmenu.contains(e.target)) {
+                    contactToggle.classList.remove('open');
+                    contactSubmenu.classList.remove('open');
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
